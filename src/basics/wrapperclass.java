@@ -18,7 +18,6 @@ public class wrapperclass {
 		int j = iobj1; //This is Unboxing where the compiler takes care of Integer class converting into the Primitive type int. without the above step
 		System.out.println(j);
 
-
 	}
 
 }

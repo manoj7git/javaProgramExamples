@@ -2,6 +2,7 @@ package programmingexamples;
 
 public class SwaptwoStrings {
 
+	private int ssn;
 	public static void main(String[] args) {
 		// Swap two strings with & without 3rd variable
 		
@@ -24,7 +25,6 @@ public class SwaptwoStrings {
 
 		System.out.println(x);
 		System.out.println(y);*/
-
+		
 	}
-
 }
