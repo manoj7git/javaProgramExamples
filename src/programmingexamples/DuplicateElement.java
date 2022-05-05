@@ -1,6 +1,9 @@
 package programmingexamples;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 
 public class DuplicateElement {
@@ -20,7 +23,7 @@ public class DuplicateElement {
 			}			
 		}
 		
-		System.out.println("******************************");
+		System.out.println("**********Using Hash Set ********************");
 		//Solution 2: Using HashSet, Time complexity: O(n)
 		//As HashSet stores only Unique element
 		Set<String> store = new HashSet<String>();
@@ -29,6 +32,30 @@ public class DuplicateElement {
 				System.out.println("Duplicate element is :: " + name);
 			}
 		}
+		
+		System.out.println("**********Using Hash Map ********************");
+		//Solution 2: Using HashMap, Time complexity: O(n)
+		//As HashMap stores Key-Value pair
+		
+		Map<String, Integer> hm = new HashMap<String, Integer>();
+		
+		for (String name : names) {
+			if (hm.containsKey(name)) {
+				hm.put(name, hm.get(name)+1);
+			}else {
+				hm.put(name, 1);
+			}
+		}
+			
+		//Print the Map
+		Set<Map.Entry<String, Integer>> entryset = hm.entrySet();
+		for (Map.Entry<String, Integer> entry : entryset) {
+			if (entry.getValue()>1) {
+				System.out.println(entry.getKey() + ":" + entry.getValue());
+			}
+		}
+		
+
 
 	}
 
